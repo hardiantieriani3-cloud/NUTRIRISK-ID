@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>NutriRisk ID</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>NutriRisk ID</h1>
+  <p>Sistem Prediksi Risiko Diabetes</p>
+
+  <form id="nutriForm">
+    <label>Berat Badan (kg)</label>
+    <input type="number" id="berat" required>
+
+    <label>Tinggi Badan (cm)</label>
+    <input type="number" id="tinggi" required>
+
+    <label>Usia (tahun)</label>
+    <input type="number" id="usia" required>
+
+    <label>Jenis Kelamin</label>
+    <select id="gender">
+      <option value="laki-laki">Laki-laki</option>
+      <option value="perempuan">Perempuan</option>
+    </select>
+
+    <label>Tingkat Aktivitas</label>
+    <select id="aktivitas">
+      <option value="1.2">Sedentary</option>
+      <option value="1.375">Ringan</option>
+      <option value="1.55">Sedang</option>
+      <option value="1.725">Berat</option>
+    </select>
+
+    <label>Riwayat Keluarga Diabetes</label>
+    <select id="riwayat">
+      <option value="tidak">Tidak</option>
+      <option value="ada">Ada</option>
+    </select>
+
+    <label>Pola Makan</label>
+    <select id="pola">
+      <option value="sehat">Sehat</option>
+      <option value="tidak">Tidak Sehat</option>
+    </select>
+
+    <button type="submit">Hitung Risiko</button>
+  </form>
+
+  <div id="hasil"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

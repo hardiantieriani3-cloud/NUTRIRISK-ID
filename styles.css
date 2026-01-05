@@ -1,0 +1,91 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+.card {
+  background: #fff;
+  width: 420px;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+h2 {
+  color: #2c7be5;
+  text-align: center;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+}
+
+.tabs {
+  display: flex;
+  margin: 20px 0;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: #eee;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.tab.active {
+  background: #2c7be5;
+  color: white;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+label {
+  margin-top: 12px;
+  display: block;
+  font-size: 14px;
+}
+
+input, select {
+  width: 100%;
+  margin-top: 5px;
+}
+
+input[type=range] {
+  accent-color: #2c7be5;
+}
+
+.value {
+  font-size: 13px;
+  color: #555;
+}
+
+button[type=submit] {
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+  background: #2c7be5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+#hasil {
+  margin-top: 20px;
+  background: #f1f5ff;
+  padding: 15px;
+  border-radius: 8px;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Kalkulator Gizi & Risiko Diabetes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="card">
+    <h2>Kalkulator Gizi & Risiko Diabetes</h2>
+    <p class="subtitle">
+      Hitung status gizi, kebutuhan energi harian, dan estimasi risiko diabetes
+    </p>
+
+    <!-- TAB -->
+    <div class="tabs">
+      <button class="tab active" onclick="showTab('kalkulator')">Kalkulator</button>
+      <button class="tab" onclick="showTab('edukasi')">Edukasi</button>
+    </div>
+
+    <!-- KALKULATOR -->
+    <div id="kalkulator" class="tab-content active">
+      <form id="nutriForm">
+
+        <label>Berat Badan (kg)</label>
+        <input type="range" id="berat" min="30" max="150" value="50"
+          oninput="beratVal.innerText=this.value">
+        <div class="value"><span id="beratVal">50</span> kg</div>
+
+        <label>Tinggi Badan (cm)</label>
+        <input type="range" id="tinggi" min="130" max="200" value="165"
+          oninput="tinggiVal.innerText=this.value">
+        <div class="value"><span id="tinggiVal">165</span> cm</div>
+
+        <label>Usia (tahun)</label>
+        <input type="number" id="usia" placeholder="Contoh: 21" required>
+
+        <label>Jenis Kelamin</label>
+        <select id="gender">
+          <option value="laki-laki">Laki-laki</option>
+          <option value="perempuan">Perempuan</option>
+        </select>
+
+        <label>Tingkat Aktivitas</label>
+        <select id="aktivitas">
+          <option value="1.2">Sedentary</option>
+          <option value="1.375">Ringan</option>
+          <option value="1.55">Sedang</option>
+          <option value="1.725">Berat</option>
+        </select>
+
+        <label>Riwayat Keluarga Diabetes</label>
+        <select id="riwayat">
+          <option value="tidak">Tidak</option>
+          <option value="ada">Ada</option>
+        </select>
+
+        <label>Pola Makan</label>
+        <select id="pola">
+          <option value="sehat">Sehat</option>
+          <option value="tidak">Tidak Sehat</option>
+        </select>
+
+        <button type="submit">Hitung</button>
+      </form>
+
+      <div id="hasil"></div>
+    </div>
+
+    <!-- EDUKASI -->
+    <div id="edukasi" class="tab-content">
+      <h3>Edukasi Diabetes</h3>
+      <p>
+        Diabetes melitus adalah penyakit kronis yang ditandai dengan
+        meningkatnya kadar gula darah akibat gangguan produksi atau kerja insulin.
+      </p>
+      <ul>
+        <li>Jaga berat badan ideal</li>
+        <li>Perbanyak aktivitas fisik</li>
+        <li>Kurangi gula dan makanan ultra-proses</li>
+        <li>Rutin cek gula darah</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
